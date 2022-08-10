@@ -1,0 +1,487 @@
+[
+  {
+    "id": "builtin_text-pSsHWg",
+    "formData": {
+      "text$en": "👋, {{user.nickname}}!",
+      "variations$en": [
+        "Hello, {{user.nickname}}!",
+        "Welcome to Botpress, {{user.nickname}}!"
+      ],
+      "typing$en": true,
+      "text$pt": "👋, {{user.nickname}}!",
+      "variations$pt": [
+        "Hello, {{user.nickname}}!",
+        "Welcome to Botpress, {{user.nickname}}!"
+      ],
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T00:57:36.026Z",
+    "modifiedOn": "2022-07-04T09:14:21.626Z"
+  },
+  {
+    "id": "builtin_text-AY5SSW",
+    "formData": {
+      "text$en": "This is the first time we speak 🤖",
+      "typing$en": true,
+      "text$pt": "This is the first time we speak 🤖",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T00:59:51.118Z",
+    "modifiedOn": "2022-07-04T09:14:21.691Z"
+  },
+  {
+    "id": "builtin_text-bFsOmf",
+    "formData": {
+      "text$en": "We already spoke {{temp.$r}} times!",
+      "typing$en": true,
+      "text$pt": "We already spoke {{temp.$r}} times!",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:00:37.593Z",
+    "modifiedOn": "2022-07-04T09:14:21.744Z"
+  },
+  {
+    "id": "builtin_text-TtzrCV",
+    "formData": {
+      "text$en": "Alright, I have forgotten your name.",
+      "typing$en": true,
+      "text$pt": "Alright, I have forgotten your name.",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:06:41.963Z",
+    "modifiedOn": "2022-07-04T09:14:21.793Z"
+  },
+  {
+    "id": "builtin_text-z0J9qh",
+    "formData": {
+      "text$en": "May I know your name please?",
+      "typing$en": true,
+      "text$pt": "May I know your name please?",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:08:41.241Z",
+    "modifiedOn": "2022-07-04T09:14:21.839Z"
+  },
+  {
+    "id": "builtin_text-X069Le",
+    "formData": {
+      "text$en": "Try saying something like \"forget my name\"!",
+      "typing$en": true,
+      "text$pt": "Try saying something like \"forget my name\"!",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:16:53.227Z",
+    "modifiedOn": "2022-07-04T09:14:21.900Z"
+  },
+  {
+    "id": "builtin_text-kKQ8C3",
+    "formData": {
+      "text$en": "(To see how this works, double-click anywhere on the flow and go to the \"Transitions\" panel)",
+      "typing$en": true,
+      "text$pt": "(To see how this works, double-click anywhere on the flow and go to the \"Transitions\" panel)",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:17:55.317Z",
+    "modifiedOn": "2022-07-04T09:14:21.935Z"
+  },
+  {
+    "id": "builtin_text-lbs0Re",
+    "formData": {
+      "text$en": "Hi, I'm Welcome Bot! My task is to help you understand how saltzap works.",
+      "typing$en": true,
+      "text$pt": "Bem vindo ao atendimento digital BP Boticário de renegociação!",
+      "typing$pt": true,
+      "markdown$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T16:41:48.068Z",
+    "modifiedOn": "2022-07-04T09:18:34.313Z"
+  },
+  {
+    "id": "builtin_text-sRxAPP",
+    "formData": {
+      "text$en": "Bot Memory is used by the bot to store information about a conversation. Here's an example.",
+      "typing$en": true,
+      "text$pt": "Bot Memory is used by the bot to store information about a conversation. Here's an example.",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T16:55:01.413Z",
+    "modifiedOn": "2022-07-04T09:14:22.025Z"
+  },
+  {
+    "id": "builtin_text-6RY1f5",
+    "formData": {
+      "text$en": "A bot could ask questions that are similar but have different meanings. To differentiate between the meanings of these questions, we use Contexts.",
+      "typing$en": true,
+      "text$pt": "A bot could ask questions that are similar but have different meanings. To differentiate between the meanings of these questions, we use Contexts.",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T17:02:32.795Z",
+    "modifiedOn": "2022-07-04T09:14:22.077Z"
+  },
+  {
+    "id": "builtin_text-UP2ozm",
+    "formData": {
+      "text$en": "Please pick an animal from the choices, I'm not a Zoologist.",
+      "typing$en": true,
+      "text$pt": "Please pick an animal from the choices, I'm not a Zoologist.",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T18:05:07.711Z",
+    "modifiedOn": "2022-07-04T09:14:22.122Z"
+  },
+  {
+    "id": "builtin_text-lALv5x",
+    "formData": {
+      "text$en": "Please ask questions about that animal, like its life span or its habitat.",
+      "typing$en": true,
+      "text$pt": "Please ask questions about that animal, like its life span or its habitat.",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T18:14:48.625Z",
+    "modifiedOn": "2022-07-04T09:14:22.155Z"
+  },
+  {
+    "id": "builtin_text-bOU5xw",
+    "formData": {
+      "text$en": "Please refer to our [documentation](https://botpress.com/docs/build/memory) to learn more about Bot Memory.",
+      "typing$en": true,
+      "text$pt": "Please refer to our [documentation](https://botpress.com/docs/build/memory) to learn more about Bot Memory.",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T18:29:05.998Z",
+    "modifiedOn": "2022-07-04T09:14:22.212Z"
+  },
+  {
+    "id": "builtin_text-SKQxXN",
+    "formData": {
+      "text$en": "Ask me something thats included in the choices. Let's try again.",
+      "typing$en": true,
+      "text$pt": "Ask me something thats included in the choices. Let's try again.",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T18:40:32.874Z",
+    "modifiedOn": "2022-07-04T09:14:22.259Z"
+  },
+  {
+    "id": "builtin_text-T8Oa8M",
+    "formData": {
+      "text$en": "To learn more about how to setup a Contextual FAQ, please refer to our [tutorial](https://botpress.com/docs/tutorials/contextual-faq)",
+      "typing$en": true,
+      "text$pt": "To learn more about how to setup a Contextual FAQ, please refer to our [tutorial](https://botpress.com/docs/tutorials/contextual-faq)",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T19:53:14.411Z",
+    "modifiedOn": "2022-07-04T09:14:22.304Z"
+  },
+  {
+    "id": "builtin_text-yFOIFD",
+    "formData": {
+      "text$en": "Tell me if you need help!",
+      "typing$en": true,
+      "text$pt": "Tell me if you need help!",
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T22:02:33.058Z",
+    "modifiedOn": "2022-07-04T09:14:22.350Z"
+  },
+  {
+    "id": "builtin_text-error",
+    "formData": {
+      "text$en": "😯 Oops! We've got a problem. Please try something else while we're fixing it 🔨",
+      "typing$en": true,
+      "text$pt": "😯 Oops! não conseguiu buscar suas informações, vou lhe direcionar a um atendente 🔨",
+      "typing$pt": true,
+      "markdown$pt": true,
+      "variations$pt": [
+        "😯 Não conseguiu buscar suas informações, vou lhe direcionar a um atendente!",
+        "😯 Oops! vou lhe direcionar a um atendente. Não estou conseguindo consultar."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-09-03T18:58:10.702Z",
+    "modifiedOn": "2022-07-04T09:37:55.590Z"
+  },
+  {
+    "id": "builtin_text--icAL0",
+    "formData": {
+      "markdown$en": true,
+      "typing$en": true,
+      "text$en": "{{temp.endMessage}}",
+      "text$pt": "{{temp.endMessage}}",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2021-07-23T19:07:46.506Z",
+    "modifiedOn": "2022-07-04T09:14:22.447Z"
+  },
+  {
+    "id": "builtin_text-CxpwMa",
+    "formData": {
+      "text$pt": "Por favor informe seu CPF para continuar.",
+      "markdown$pt": true,
+      "typing$pt": true,
+      "variations$pt": []
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T09:19:40.862Z",
+    "modifiedOn": "2022-07-04T09:19:40.862Z"
+  },
+  {
+    "id": "builtin_text-d5GXi3",
+    "formData": {
+      "text$pt": "Obrigada, estamos validando suas informações .",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T09:22:25.251Z",
+    "modifiedOn": "2022-07-26T13:02:40.701Z"
+  },
+  {
+    "id": "builtin_text-oT7cUE",
+    "formData": {
+      "text$pt": "Olá {{user.credor.body.0.nome}}",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T10:45:52.696Z",
+    "modifiedOn": "2022-07-04T10:45:52.696Z"
+  },
+  {
+    "id": "builtin_text-kZlnSm",
+    "formData": {
+      "text$pt": "Por favor qual o dia do seu nacimento?",
+      "markdown$pt": true,
+      "typing$pt": true,
+      "variations$pt": [
+        "Por favor qual o mês do seu nacimento?",
+        "Em que mês você nasceu?",
+        "Em que dia você nasceu?",
+        "Qual o ano do seu nascimento?",
+        "Em que ano você nasceu?"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T15:27:31.508Z",
+    "modifiedOn": "2022-07-04T19:00:01.837Z"
+  },
+  {
+    "id": "builtin_text-0vs-ax",
+    "formData": {
+      "text$pt": "Dados validados, vou buscar suas oportunidades!",
+      "markdown$pt": true,
+      "typing$pt": true,
+      "variations$pt": [
+        ""
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T15:35:36.007Z",
+    "modifiedOn": "2022-07-04T15:35:36.007Z"
+  },
+  {
+    "id": "builtin_text-UM_hD6",
+    "formData": {
+      "text$pt": "Obrigado pela confirmação. Estamos buscando as opções disponíveis de DESCONTOS para seus títulos em aberto. ",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T19:38:29.614Z",
+    "modifiedOn": "2022-08-03T12:12:13.970Z"
+  },
+  {
+    "id": "builtin_text-mn-5gl",
+    "formData": {
+      "text$pt": "O seu valor em aberto é {{user.divida.body.0.descontroString}}",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T20:07:27.410Z",
+    "modifiedOn": "2022-08-08T19:18:51.827Z"
+  },
+  {
+    "id": "builtin_text-U0oSIM",
+    "formData": {
+      "text$pt": "Você possui um acordo vigente com o número *{{user.acordo.body.0.contrato}}* . \nSua parcela {{user.acordo.body.0..parcela}} no valor de {{user.acordo.body.0.valor_parcela}} está disponível. \nPosso lhe enviar seu boleto (vencimento:{{user.acordo.body.0.vencimento}})?",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-04T21:49:25.520Z",
+    "modifiedOn": "2022-07-05T04:44:53.091Z"
+  },
+  {
+    "id": "builtin_text-0JrRsG",
+    "formData": {
+      "text$pt": "Vou providenciar, assim que possível lhe encaminho!",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-05T04:50:16.023Z",
+    "modifiedOn": "2022-07-05T04:50:16.023Z"
+  },
+  {
+    "id": "builtin_text-biyzFo",
+    "formData": {
+      "text$pt": "Posso ajudar em algo mais?",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-05T04:52:17.338Z",
+    "modifiedOn": "2022-07-05T04:52:17.338Z"
+  },
+  {
+    "id": "builtin_text-2zvhNm",
+    "formData": {
+      "text$pt": "Não localizamos pendências!",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-05T05:34:00.773Z",
+    "modifiedOn": "2022-07-05T05:34:37.683Z"
+  },
+  {
+    "id": "builtin_text-vdftoT",
+    "formData": {
+      "text$pt": "Vou buscar sua oferta, aguarde!",
+      "markdown$pt": true,
+      "typing$pt": true,
+      "variations$pt": [
+        "Aguarde, estou consultando as opções.",
+        "agora, vou buscar sua oferta, aguarde!"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-06T03:17:10.871Z",
+    "modifiedOn": "2022-07-06T03:17:10.871Z"
+  },
+  {
+    "id": "builtin_text-YDs8Lv",
+    "formData": {
+      "text$pt": "data incorreta!",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-06T19:46:09.314Z",
+    "modifiedOn": "2022-07-06T19:46:09.314Z"
+  },
+  {
+    "id": "builtin_text-lw2Ikn",
+    "formData": {
+      "text$pt": "Parabéns!!! Você ganhou um desconto de {{user.opcoesPgto.body.0.opcoesPagamento.0.descontoString}}. Valor a vista para pagamento: {{user.opcoesPgto.body.0.opcoesPagamento.0.valorString}}",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-07T02:46:59.398Z",
+    "modifiedOn": "2022-08-08T20:00:20.068Z"
+  },
+  {
+    "id": "builtin_text-Rp3VWR",
+    "formData": {
+      "text$pt": "Ótimo, vou providenciar e assim que possível lhe envio o boleto!",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-07T16:37:30.880Z",
+    "modifiedOn": "2022-07-15T02:28:00.795Z"
+  },
+  {
+    "id": "builtin_text-PF8uC7",
+    "formData": {
+      "text$pt": "e com desconto de R$   {{user.opcaoAtual.desconto}}. {{user.opcaoAtual.texto}}",
+      "markdown$pt": true,
+      "typing$pt": true,
+      "variations$pt": [
+        "olha só, desconto de R$ {{user.opcaoAtual.desconto}}. {{user.opcaoAtual.texto}}",
+        "{{user.opcaoAtual.texto}}. com este valor desconto R$ {{user.opcaoAtual.desconto}}. "
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-07T16:39:27.805Z",
+    "modifiedOn": "2022-07-28T16:56:59.554Z"
+  },
+  {
+    "id": "builtin_text-q3mk8v",
+    "formData": {
+      "text$pt": "Vou verificar e assim que possível lhe retorno!",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-07T16:41:55.784Z",
+    "modifiedOn": "2022-07-07T16:41:55.784Z"
+  },
+  {
+    "id": "builtin_text-YKDHZx",
+    "formData": {
+      "text$pt": "{{pdfAcordo[0].urlBoleto}}",
+      "markdown$pt": true,
+      "typing$pt": true,
+      "variations$pt": [
+        ""
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-20T18:22:52.983Z",
+    "modifiedOn": "2022-07-20T18:22:52.983Z"
+  },
+  {
+    "id": "builtin_text-fK4k_5",
+    "formData": {
+      "text$pt": "ola, estamos validando suas informaçôes !",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-25T17:17:35.063Z",
+    "modifiedOn": "2022-07-26T12:52:46.017Z"
+  },
+  {
+    "id": "builtin_text-WZBadN",
+    "formData": {
+      "text$pt": "Puxa!! Não perca esta chance de negociar com o desconto diferenciado.\n\nEu quero te apresentar algumas condições parceladas que  podem se encaixar em seu orçamento.\n\nNão encerre antes de ter acesso as condiçõe que temos hoje para voce.",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-26T13:20:30.300Z",
+    "modifiedOn": "2022-07-26T13:20:30.300Z"
+  },
+  {
+    "id": "builtin_text-Tuo-Lb",
+    "formData": {
+      "text$pt": "Deixa eu ver aqui como podemos te ajudar então . Estamos pedindo ao nosso consultor para buscar uma condição diferenciada para seu contrato. ...só um momento.",
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-26T13:22:51.154Z",
+    "modifiedOn": "2022-07-26T13:22:51.154Z"
+  }
+]

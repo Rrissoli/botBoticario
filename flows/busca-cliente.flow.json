@@ -1,0 +1,178 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "3ba26b022a",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "APIauthentica"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-c313a7",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "APIauthentica",
+      "flow": "skills/CallAPI-c313a7.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "user.auth.status ==200",
+          "conditionType": "props",
+          "node": "APIbusca-credores"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-3b2361",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "APIbusca-credores",
+      "flow": "skills/CallAPI-3b2361.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": " user !== undefined &&\n user.credor !== undefined  &&\n user.credor.body !== undefined  &&\n user.credor.body[0] !== undefined  &&\n user.credor.body[0][\"cnpJ_CPF\"] !== undefined  &&\n user.credor.body[0].cnpJ_CPF  !== null",
+          "conditionType": "raw",
+          "node": "validaAPIbc"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-b535"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "b2ec9b17a1",
+      "name": "validaAPIbc",
+      "next": [
+        {
+          "condition": "user.credor.body[\"0\"].mensagemRetorno.sucesso    ==true",
+          "conditionType": "props",
+          "node": "CallAPI-94ca7d"
+        },
+        {
+          "condition": "user.user.credor.body[\"0\"].mensagemRetorno.sucesso    ==false",
+          "conditionType": "props",
+          "node": "node-b535"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-oT7cUE",
+        "say #!builtin_text-kZlnSm",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"ask\",\"value\":\"{{bot.preview}}\"}"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"valid\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "f336ee1c17",
+      "name": "valida_data",
+      "next": [
+        {
+          "condition": "temp.response.body.status  ==true",
+          "conditionType": "props",
+          "node": "confirmado"
+        },
+        {
+          "condition": "temp.response.body.status ==false",
+          "conditionType": "props",
+          "node": ""
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-94ca7d",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-94ca7d",
+      "flow": "skills/CallAPI-94ca7d.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "valida_data"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": "node-1d6a"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "c149ec9db7",
+      "name": "confirmado",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "busca-divida.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-UM_hD6",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"valid\",\"value\":\"true\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9bf37d6757",
+      "name": "node-1d6a",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-YDs8Lv"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "0e69e108ae",
+      "name": "node-b535",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-2zvhNm"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

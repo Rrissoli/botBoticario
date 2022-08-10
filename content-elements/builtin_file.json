@@ -1,0 +1,13 @@
+[
+  {
+    "id": "builtin_file-xaXQ5g",
+    "formData": {
+      "typing$pt": true,
+      "file$pt": "{{user.pdfAcordo.0.urlBoleto}}",
+      "title$pt": "Boleto"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-20T18:08:06.032Z",
+    "modifiedOn": "2022-07-20T18:08:06.032Z"
+  }
+]

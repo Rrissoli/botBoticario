@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "user",
+    "randomId": "LSF3T9Dtv5",
+    "body": "{\"token\":\"{{user.auth.body.0.token}}\"}",
+    "headers": {
+      "Content-type": "application/json"
+    },
+    "url": "https://bp.saltzap.com/webhook/f4c4c139-b5b4-417b-81b3-4a88bb2b2f0b",
+    "variable": "credor",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"randomId\":\"LSF3T9Dtv5\",\"url\":\"https://bp.saltzap.com/webhook/f4c4c139-b5b4-417b-81b3-4a88bb2b2f0b\",\"method\":\"post\",\"body\":\"{\\\"token\\\":\\\"{{user.auth.body.0.token}}\\\"}\",\"headers\":{\"Content-type\":\"application/json\"},\"memory\":\"user\",\"variable\":\"credor\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "963075"
+    }
+  ]
+}

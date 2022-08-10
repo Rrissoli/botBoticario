@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "user",
+    "randomId": "",
+    "body": "{ \n\"fone\":\"{{event.target}}\",\n\"token\":\"{{user.auth.body.0.token}}\",\n \"Crm\": \"{{user.credor.body.0.credores.0.crms.0}}\", \n \"Contrato\": \"{{user.divida.body.0.documento}}\", \n \"Cnpj_Cpf\": \"{{user.cpf}}\",\n \"guidBoleto\": \"{{user.acordoGerado.body.0.guidBoleto}}\", \n\"urlBoleto\": \"{{user.acordoGerado.body.0.urlBoleto}}\"\n}",
+    "headers": {
+      "content-type": "application/json"
+    },
+    "url": "https://bp.saltzap.com/webhook/dbef5bc0-be42-44af-817e-a0da1f15eb67  ",
+    "variable": "pdfAcordo",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"randomId\":\"\",\"url\":\"https://bp.saltzap.com/webhook/dbef5bc0-be42-44af-817e-a0da1f15eb67  \",\"method\":\"post\",\"body\":\"{ \\n\\\"fone\\\":\\\"{{event.target}}\\\",\\n\\\"token\\\":\\\"{{user.auth.body.0.token}}\\\",\\n \\\"Crm\\\": \\\"{{user.credor.body.0.credores.0.crms.0}}\\\", \\n \\\"Contrato\\\": \\\"{{user.divida.body.0.documento}}\\\", \\n \\\"Cnpj_Cpf\\\": \\\"{{user.cpf}}\\\",\\n \\\"guidBoleto\\\": \\\"{{user.acordoGerado.body.0.guidBoleto}}\\\", \\n\\\"urlBoleto\\\": \\\"{{user.acordoGerado.body.0.urlBoleto}}\\\"\\n}\",\"headers\":{\"content-type\":\"application/json\"},\"memory\":\"user\",\"variable\":\"pdfAcordo\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "810888"
+    }
+  ]
+}

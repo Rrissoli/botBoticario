@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "user",
+    "randomId": "",
+    "body": "{\"fone\":\"{{event.target}}\",\n\"token\":\"{{user.auth.body.0.token}}\",\n\"doc\": \"{{user.cpf}}\",\n\"Crm\": \"{{user.credor.body.0.credores.0.crms.0}}\",\n\"Carteira\":\"{{user.divida.body.0.carteiraId}}\",\n\"Contrato\": \"{{user.divida.body.0.documento}}\",\n\"Valor\": \"{{ user.opcoesPgto.body.0.opcoesPagamento.0.valor }}\",\n\"Parcelas\": \"{{user.opcoesPgto.body.0.opcoesPagamento.0.qtdParcelas }}\",\n\"DataVencimento\": \"{{ user.dtVctoSl }}\"\n}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "url": "https://bp.saltzap.com/webhook/37e95b6b-e57a-4550-a02e-3c45f5e54b35",
+    "variable": "acordoGerado",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"randomId\":\"\",\"url\":\"https://bp.saltzap.com/webhook/37e95b6b-e57a-4550-a02e-3c45f5e54b35\",\"method\":\"post\",\"body\":\"{\\\"fone\\\":\\\"{{event.target}}\\\",\\n\\\"token\\\":\\\"{{user.auth.body.0.token}}\\\",\\n\\\"doc\\\": \\\"{{user.cpf}}\\\",\\n\\\"Crm\\\": \\\"{{user.credor.body.0.credores.0.crms.0}}\\\",\\n\\\"Carteira\\\":\\\"{{user.divida.body.0.carteiraId}}\\\",\\n\\\"Contrato\\\": \\\"{{user.divida.body.0.documento}}\\\",\\n\\\"Valor\\\": \\\"{{ user.opcoesPgto.body.0.opcoesPagamento.0.valor }}\\\",\\n\\\"Parcelas\\\": \\\"{{user.opcoesPgto.body.0.opcoesPagamento.0.qtdParcelas }}\\\",\\n\\\"DataVencimento\\\": \\\"{{ user.dtVctoSl }}\\\"\\n}\",\"headers\":{\"Content-Type\":\"application/json\"},\"memory\":\"user\",\"variable\":\"acordoGerado\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "843302"
+    }
+  ]
+}

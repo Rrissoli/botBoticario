@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "user",
+    "randomId": "",
+    "body": "{\n\"token\":\"{{user.auth.body.0.token}}\",\n\"financeira\": \"{{user.credor.body.0.credores.0.financeira}}\",\n\"crms\": \"{{user.credor.body.0.credores.0.crms.0}}\"\n}",
+    "headers": {
+      "Content-type": "application/json"
+    },
+    "url": "https://bp.saltzap.com/webhook/d6e494a2-9750-4aaa-8866-2c90b28975debot",
+    "variable": "divida",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"randomId\":\"\",\"url\":\"https://bp.saltzap.com/webhook/d6e494a2-9750-4aaa-8866-2c90b28975debot\",\"method\":\"post\",\"body\":\"{\\n\\\"token\\\":\\\"{{user.auth.body.0.token}}\\\",\\n\\\"financeira\\\": \\\"{{user.credor.body.0.credores.0.financeira}}\\\",\\n\\\"crms\\\": \\\"{{user.credor.body.0.credores.0.crms.0}}\\\"\\n}\",\"headers\":{\"Content-type\":\"application/json\"},\"memory\":\"user\",\"variable\":\"divida\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "381226"
+    }
+  ]
+}

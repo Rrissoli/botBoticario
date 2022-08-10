@@ -1,0 +1,552 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "b39ecd7f71",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-divida"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-6fe131",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-divida",
+      "flow": "skills/CallAPI-6fe131.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "CallAPI-acordo"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-52c05e",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-acordo",
+      "flow": "skills/CallAPI-52c05e.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "divida-ou-acordo"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "33259f5a71",
+      "name": "divida-ou-acordo",
+      "next": [
+        {
+          "condition": "user.divida.body[\"0\"].numero     !==undefined",
+          "conditionType": "props",
+          "node": "node-9ac3"
+        },
+        {
+          "condition": "user.acordo.body[\"0\"].contrato   !== undefined",
+          "conditionType": "props",
+          "node": "acordo-existe"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-670d"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "dd54312ee4",
+      "name": "node-9ac3",
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-opcoes-pgto"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-mn-5gl",
+        "say #!builtin_text-vdftoT"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e0e3ba041e",
+      "name": "acordo-existe",
+      "next": [
+        {
+          "condition": "true",
+          "node": "apresenta-acordo"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "99d302032d",
+      "name": "apresenta-acordo",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-da07e8"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-U0oSIM"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-da07e8",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-da07e8",
+      "flow": "skills/choice-da07e8.flow.json",
+      "next": [
+        {
+          "caption": "User picked [sim]",
+          "condition": "temp['skill-choice-ret-cdvgwnto66'] == \"sim\"",
+          "node": "node-ec39"
+        },
+        {
+          "caption": "User picked [não]",
+          "condition": "temp['skill-choice-ret-cdvgwnto66'] == \"não\"",
+          "node": "node-ec39-copy"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "d269436520",
+      "name": "node-ec39",
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-a24e47"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-0JrRsG",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"PA\",\"value\":\"true\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "355c4f3950",
+      "name": "node-ec39-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-biyzFo",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"PA\",\"value\":\"true\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "cd2fbf38ef",
+      "name": "node-670d",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-ec39-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-2zvhNm"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-f46335",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-opcoes-pgto",
+      "flow": "skills/CallAPI-f46335.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid_rEI5fnab8v",
+          "node": "node-1afd"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid_rEI5fnab8v",
+          "node": "node-1afd"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "da2a54647d",
+      "name": "node-1afd",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-257520"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"op\",\"value\":\"1\"}",
+        "say #!builtin_text-lw2Ikn",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"opcaoAtual\",\"value\":\"0\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-257520",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-257520",
+      "flow": "skills/choice-257520.flow.json",
+      "next": [
+        {
+          "caption": "User picked [sim]",
+          "condition": "temp['skill-choice-ret-zred309m36'] == \"sim\"",
+          "node": "node-fb24"
+        },
+        {
+          "caption": "User picked [outra]",
+          "condition": "temp['skill-choice-ret-zred309m36'] == \"outra\"",
+          "node": "node-1afd-copy"
+        },
+        {
+          "caption": "User picked [não]",
+          "condition": "temp['skill-choice-ret-zred309m36'] == \"não\"",
+          "node": "node-8262"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "7d6810bcfc",
+      "name": "node-12a9",
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-GerarAcordo"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Rp3VWR",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"PA\",\"value\":\"true\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d5012fe98b",
+      "name": "node-1afd-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-257520-copy"
+        }
+      ],
+      "onEnter": [
+        "opcoesPgto {\"name\":\"\",\"value\":\"\"}",
+        "say #!builtin_text-PF8uC7"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-3624c1",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-257520-copy",
+      "flow": "skills/choice-3624c1.flow.json",
+      "next": [
+        {
+          "caption": "User picked [sim]",
+          "condition": "temp['skill-choice-ret-3bTmBHar79'] == \"sim\"",
+          "node": "node-fb24"
+        },
+        {
+          "caption": "User picked [outra]",
+          "condition": "temp['skill-choice-ret-3bTmBHar79'] == \"outra\"",
+          "node": "node-12a9-copy"
+        },
+        {
+          "caption": "User picked [não]",
+          "condition": "temp['skill-choice-ret-3bTmBHar79'] == \"não\"",
+          "node": "node-ec39-copy"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "9b2e47ff41",
+      "name": "node-12a9-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-1afd-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-q3mk8v"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-5c91a6",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-GerarAcordo",
+      "flow": "skills/CallAPI-5c91a6.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "CallAPI-6b6b03"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-6b6b03",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-6b6b03",
+      "flow": "skills/CallAPI-6b6b03.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": ""
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-a24e47",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-a24e47",
+      "flow": "skills/CallAPI-a24e47.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": ""
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "0a97008139",
+      "name": "node-8262",
+      "next": [
+        {
+          "condition": "user.opcaoAtual ==\"0\"",
+          "conditionType": "props",
+          "node": "node-7950"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-95f3"
+        },
+        {
+          "condition": "user.opcaoAtual !==\"0\"",
+          "conditionType": "props",
+          "node": ""
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c4a9789bfd",
+      "name": "node-7950",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-1afd-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-WZBadN"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c8c8a82cf1",
+      "name": "node-95f3",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Tuo-Lb",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"PA\",\"value\":\"true\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d7e5d3b48c",
+      "name": "node-fb24",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-dc6a7d"
+        }
+      ],
+      "onEnter": [
+        "diasVencimento {\"name\":\"\",\"value\":\"\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c5a7a2c2a9",
+      "name": "setvctoSl",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-12a9"
+        }
+      ],
+      "onEnter": [
+        "setVcto {\"name\":\"\",\"value\":\"\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-dc6a7d",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-dc6a7d",
+      "flow": "skills/choice-dc6a7d.flow.json",
+      "next": [
+        {
+          "caption": "User picked [1]",
+          "condition": "temp['skill-choice-ret-y88su62xo0'] ==  user.dtVcto1 ",
+          "conditionType": "raw",
+          "node": "setvctoSl"
+        },
+        {
+          "caption": "User picked [2]",
+          "condition": "temp['skill-choice-ret-y88su62xo0'] == \"2\"",
+          "node": "setvctoSl"
+        },
+        {
+          "caption": "User picked [3]",
+          "condition": "temp['skill-choice-ret-y88su62xo0'] == \"3\"",
+          "node": "setvctoSl"
+        },
+        {
+          "caption": "User picked [4]",
+          "condition": "temp['skill-choice-ret-y88su62xo0'] == \"4\"",
+          "node": "setvctoSl"
+        },
+        {
+          "caption": "User picked [5]",
+          "condition": "temp['skill-choice-ret-y88su62xo0'] == \"5\"",
+          "node": "setvctoSl"
+        },
+        {
+          "caption": "User picked [6]",
+          "condition": "temp['skill-choice-ret-y88su62xo0'] == \"6\"",
+          "node": "setvctoSl"
+        },
+        {
+          "caption": "User picked [7]",
+          "condition": "temp['skill-choice-ret-y88su62xo0'] == \"7\"",
+          "node": "setvctoSl"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "conditionType": "always",
+          "node": "setvctoSl"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

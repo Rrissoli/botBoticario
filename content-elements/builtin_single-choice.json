@@ -1,0 +1,237 @@
+[
+  {
+    "id": "builtin_single-choice-elJyV5",
+    "formData": {
+      "text$en": "a",
+      "choices$en": [
+        {
+          "title": "1",
+          "value": "1"
+        },
+        {
+          "title": "2",
+          "value": "2"
+        }
+      ],
+      "typing$en": true,
+      "text$pt": "a",
+      "choices$pt": [
+        {
+          "title": "1",
+          "value": "1"
+        },
+        {
+          "title": "2",
+          "value": "2"
+        }
+      ],
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-17T14:29:04.897Z",
+    "modifiedOn": "2022-07-04T09:14:21.442Z"
+  },
+  {
+    "id": "builtin_single-choice-mrFFU_",
+    "formData": {
+      "text$en": "What would you like to know?",
+      "choices$en": [
+        {
+          "title": "What is a Context?",
+          "value": "context"
+        },
+        {
+          "title": "What is Bot Memory?",
+          "value": "memory"
+        }
+      ],
+      "typing$en": true,
+      "text$pt": "What would you like to know?",
+      "choices$pt": [
+        {
+          "title": "What is a Context?",
+          "value": "context"
+        },
+        {
+          "title": "What is Bot Memory?",
+          "value": "memory"
+        }
+      ],
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T16:42:46.073Z",
+    "modifiedOn": "2022-07-04T09:14:21.507Z"
+  },
+  {
+    "id": "builtin_single-choice-yOBfeA",
+    "formData": {
+      "text$en": "Okay, let's use a simple example. Let's talk about animals. Pick one.",
+      "choices$en": [
+        {
+          "title": "Monkey",
+          "value": "monkey"
+        },
+        {
+          "title": "Giraffe",
+          "value": "giraffe"
+        }
+      ],
+      "typing$en": true,
+      "markdown$en": true,
+      "dropdownPlaceholder$en": "Select option...",
+      "disableFreeText$en": false,
+      "isDropdown$en": true,
+      "text$pt": "Okay, let's use a simple example. Let's talk about animals. Pick one.",
+      "isDropdown$pt": true,
+      "dropdownPlaceholder$pt": "Select option...",
+      "choices$pt": [
+        {
+          "title": "Monkey",
+          "value": "monkey"
+        },
+        {
+          "title": "Giraffe",
+          "value": "giraffe"
+        }
+      ],
+      "markdown$pt": true,
+      "typing$pt": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-03-25T18:12:55.197Z",
+    "modifiedOn": "2022-07-04T09:14:21.571Z"
+  },
+  {
+    "id": "builtin_single-choice-nxs9Ib",
+    "formData": {
+      "dropdownPlaceholder$pt": "Select...",
+      "choices$pt": [
+        {
+          "title": "sim",
+          "value": "sim"
+        },
+        {
+          "title": "não",
+          "value": "não"
+        }
+      ],
+      "markdown$pt": true,
+      "disableFreeText$pt": false,
+      "typing$pt": true,
+      "text$pt": "clique em uma das opções"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-05T04:47:15.792Z",
+    "modifiedOn": "2022-07-05T04:47:15.792Z"
+  },
+  {
+    "id": "builtin_single-choice-icL4iK",
+    "formData": {
+      "dropdownPlaceholder$pt": "Select...",
+      "choices$pt": [
+        {
+          "title": "sim",
+          "value": "sim"
+        },
+        {
+          "title": "outra opção",
+          "value": "outra"
+        },
+        {
+          "title": "não",
+          "value": "não"
+        }
+      ],
+      "markdown$pt": true,
+      "disableFreeText$pt": false,
+      "typing$pt": true,
+      "text$pt": "Posso gerar este acordo?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-07T16:36:33.216Z",
+    "modifiedOn": "2022-07-07T16:36:33.216Z"
+  },
+  {
+    "id": "builtin_single-choice-mQPD1Q",
+    "formData": {
+      "dropdownPlaceholder$pt": "Select...",
+      "choices$pt": [
+        {
+          "title": "{{ user.dtVcto1 }}",
+          "value": "1"
+        },
+        {
+          "title": "{{ user.dtVcto2 }}",
+          "value": "2"
+        },
+        {
+          "title": "{{ user.dtVcto3 }}",
+          "value": "3"
+        },
+        {
+          "title": "{{ user.dtVcto4 }}",
+          "value": "4"
+        },
+        {
+          "title": "{{ user.dtVcto5 }}",
+          "value": "5"
+        },
+        {
+          "title": "{{ user.dtVcto7 }}",
+          "value": "6"
+        }
+      ],
+      "markdown$pt": false,
+      "disableFreeText$pt": false,
+      "typing$pt": true,
+      "text$pt": "Por favor escolha uma data para vencimento"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-08-03T20:09:44.572Z",
+    "modifiedOn": "2022-08-08T21:21:12.879Z"
+  },
+  {
+    "id": "builtin_single-choice-QxytiU",
+    "formData": {
+      "dropdownPlaceholder$pt": "Select...",
+      "choices$pt": [
+        {
+          "title": "{{ user.dtVcto1 }}",
+          "value": "1"
+        },
+        {
+          "title": "{{ user.dtVcto2 }}",
+          "value": "2"
+        },
+        {
+          "title": "{{ user.dtVcto3 }}",
+          "value": "3"
+        },
+        {
+          "title": "{{ user.dtVcto4 }}",
+          "value": "4"
+        },
+        {
+          "title": "{{ user.dtVcto5 }}",
+          "value": "5"
+        },
+        {
+          "title": "{{ user.dtVcto6 }}",
+          "value": "6"
+        },
+        {
+          "title": "{{ user.dtVcto7 }}",
+          "value": "7"
+        }
+      ],
+      "markdown$pt": true,
+      "disableFreeText$pt": false,
+      "typing$pt": true,
+      "text$pt": "Por favor escolha uma data para vencimento:"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-08-08T21:32:35.160Z",
+    "modifiedOn": "2022-08-08T21:32:35.160Z"
+  }
+]

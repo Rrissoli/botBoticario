@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "user",
+    "randomId": "",
+    "body": "{\n\"fone\":\"{{event.target}}\",\n\"token\":\"{{user.auth.body.0.token}}\",\n\"Crm\": \"{{user.credor.body.0.credores.0.crms.0}}\",\n\"Contrato\": \"{{ user.acordo.body.0.contrato }}\", \n\"Cnpj_Cpf\": \"{{user.cpf}}\",\n\"CodigoCarteira\": \"{{ user.acordo.body.0.codCarteira }}\",\n\"Fase\": \"\",\n\"DataVencimento\": \"{{ user.acordo.body.0.inner_vencimento  }}\",\n\"Id\": \"{{ user.acordo.body.0.inner_id }}\",\n\"NossoNumero\": \"{{ user.acordo.body.0.inner_nossoNumero  }}\",\n\"QuantidadeParcela\": \"{{ user.acordo.body.0.parcela }}\",\n\"ValorBoleto\": \"{{ user.acordo.body.0.valor }}\",\n\"TipoBoleto\": \"{{ user.acordo.body.0.inner_tipo }}\"\n}\n\n",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "url": "https://bp.saltzap.com/webhook/32ba3548-c9f8-439d-b44b-637ccf959f14",
+    "variable": "colchao",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"randomId\":\"\",\"url\":\"https://bp.saltzap.com/webhook/32ba3548-c9f8-439d-b44b-637ccf959f14\",\"method\":\"post\",\"body\":\"{\\n\\\"fone\\\":\\\"{{event.target}}\\\",\\n\\\"token\\\":\\\"{{user.auth.body.0.token}}\\\",\\n\\\"Crm\\\": \\\"{{user.credor.body.0.credores.0.crms.0}}\\\",\\n\\\"Contrato\\\": \\\"{{ user.acordo.body.0.contrato }}\\\", \\n\\\"Cnpj_Cpf\\\": \\\"{{user.cpf}}\\\",\\n\\\"CodigoCarteira\\\": \\\"{{ user.acordo.body.0.codCarteira }}\\\",\\n\\\"Fase\\\": \\\"\\\",\\n\\\"DataVencimento\\\": \\\"{{ user.acordo.body.0.inner_vencimento  }}\\\",\\n\\\"Id\\\": \\\"{{ user.acordo.body.0.inner_id }}\\\",\\n\\\"NossoNumero\\\": \\\"{{ user.acordo.body.0.inner_nossoNumero  }}\\\",\\n\\\"QuantidadeParcela\\\": \\\"{{ user.acordo.body.0.parcela }}\\\",\\n\\\"ValorBoleto\\\": \\\"{{ user.acordo.body.0.valor }}\\\",\\n\\\"TipoBoleto\\\": \\\"{{ user.acordo.body.0.inner_tipo }}\\\"\\n}\\n\\n\",\"headers\":{\"Content-Type\":\"application/json\"},\"memory\":\"user\",\"variable\":\"colchao\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "604290"
+    }
+  ]
+}

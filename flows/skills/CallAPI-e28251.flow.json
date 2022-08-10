@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "temp",
+    "randomId": "",
+    "body": "{\n\"phone\": \"{{event.target}}\"\n}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "url": "https://dev.integrador.saltzap.com/webhook-test/3dbe4135-b384-48d0-b3f6-2237d5d6c900",
+    "variable": "response",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"randomId\":\"\",\"url\":\"https://dev.integrador.saltzap.com/webhook-test/3dbe4135-b384-48d0-b3f6-2237d5d6c900\",\"method\":\"post\",\"body\":\"{\\n\\\"phone\\\": \\\"{{event.target}}\\\"\\n}\",\"headers\":{\"Content-Type\":\"application/json\"},\"memory\":\"temp\",\"variable\":\"response\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "605561"
+    }
+  ]
+}

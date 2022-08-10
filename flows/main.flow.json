@@ -1,0 +1,125 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "df052970ef",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "event.payload.text  ==\"limpar\"",
+          "conditionType": "raw",
+          "node": "entry-copy"
+        },
+        {
+          "condition": "user.PA   ==\"true\"",
+          "conditionType": "props",
+          "node": ""
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "entry-copy"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "e4887b15ba",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "topic-choices",
+      "flow": "skills/choice-62d44d.flow.json",
+      "next": [
+        {
+          "condition": "temp['skill-choice-ret'] == \"context\"",
+          "node": ""
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"memory\"",
+          "node": ""
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "catch"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "114b7e7782",
+      "name": "catch",
+      "next": [
+        {
+          "condition": "true",
+          "node": "topic-choices"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-SKQxXN"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "7bd85b4c56",
+      "name": "entry-copy",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "busca-cliente.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-lbs0Re",
+        "say #!builtin_text-CxpwMa"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"cpf\",\"value\":\"{{event.payload.text}}\"}",
+        "say #!builtin_text-d5GXi3",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"PA\",\"value\":\"false\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"phone\",\"value\":\"{{event.target}}\"}"
+      ]
+    },
+    {
+      "id": "c7dbfc2476",
+      "name": "node-8c7a",
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-e28251"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-fK4k_5"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-e28251",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-e28251",
+      "flow": "skills/CallAPI-e28251.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": ""
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}
